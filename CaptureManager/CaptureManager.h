@@ -14,8 +14,6 @@
 
 @interface CaptureManager : NSObject
 
-@property (nonatomic, strong, readonly) AVCaptureDeviceFormat *activeFormat;
-
 - (instancetype)initWithPreviewView:(CapturePreviewView *)previewView;
 
 - (void)configureStandartInput;

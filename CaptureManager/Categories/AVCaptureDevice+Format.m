@@ -10,6 +10,12 @@
 
 @implementation AVCaptureDevice (Format)
 
++ (AVCaptureDeviceFormat *)defauitDeviceActiveFormat
+{
+    AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    return videoDevice.activeFormat;
+}
+
 + (void)configureDefaultDeviceWithFormat:(AVCaptureDeviceFormat *)format error:(NSError **)error
 {
     AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];

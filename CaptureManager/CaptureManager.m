@@ -48,12 +48,6 @@ static char * const kSessionQueueLabel = "Capture Manager Session Queue";
     [self.captureSession addInput:videoDeviceInput];
 }
 
-- (AVCaptureDeviceFormat *)activeFormat
-{
-    AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    return videoDevice.activeFormat;
-}
-
 #pragma mark - Public
 
 - (void)configureStandartInput

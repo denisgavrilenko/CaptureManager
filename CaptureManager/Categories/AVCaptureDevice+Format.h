@@ -10,6 +10,7 @@
 
 @interface AVCaptureDevice (Format)
 
++ (AVCaptureDeviceFormat *)defauitDeviceActiveFormat;
 + (void)configureDefaultDeviceWithFormat:(AVCaptureDeviceFormat *)format error:(NSError **)error;
 
 @end
